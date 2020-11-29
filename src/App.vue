@@ -11,11 +11,13 @@
                         class="el-menu-demo"
                         mode="horizontal"
                         @select="handleSelect"
-                        background-color="#409EFF"
-                        text-color="#303133"
+                        background-color="#037CF9"
+                        text-color="#FFFFFF"
                         active-text-color="rgba(255,150,0,1)">
-                    <el-menu-item index="1" class="el-menu-item">首页</el-menu-item>
-                    <el-menu-item index="2" class="el-menu-item">待扩展</el-menu-item>
+                    <!--<el-menu-item index="1" class="el-menu-item">首页</el-menu-item>-->
+                    <el-button type="primary" icon="el-icon-s-home">住宿</el-button>
+                    <el-button type="primary" icon="el-icon-s-promotion">机票</el-button>
+                    <el-button type="primary" icon="el-icon-search">搜索</el-button>
                 </el-menu>
             </div>
             <div id="header-user">
@@ -57,13 +59,13 @@
     }
     #header {
         width: 100%;
-        background-color: #409eff;
+        background-color: #037CF9;
         display: flex;
         align-items: center;
     }
     #header-main {
         width: 70%;
-        height: 100%;
+        height: 90%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -82,7 +84,7 @@
         width: 25%;
         height: 100px;
         display: flex;
-        color:#000000;
+        color:#FFFFFF;
         align-items: center;
         justify-content: flex-end;
     }
@@ -91,7 +93,7 @@
     }
     .el-dropdown-link {
         cursor: pointer;
-        color: #000000;
+        color: #FFFFFF;
         font-size: 20px;
     }
 </style>

@@ -1,6 +1,6 @@
 const state = () => ({
     nickName: 'yggdrasil',
-    icon: 'https://sm.ms/delete/7ql2ShkWVDYawMbHXEcu4J3Gzg'
+    icon: 'https://sm.ms/image/w4Z2pPg6FBLKR8m'
 })
 
 const mutations = {
