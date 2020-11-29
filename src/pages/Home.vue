@@ -100,8 +100,8 @@
         height: 100%;
     }
     #banner{
-      padding-left: 200px;
-      padding-right: 200px;
+      padding-left: 450px;
+      padding-right: 450px;
     }
     .el-carousel__item h3 {
       color: #475669;
