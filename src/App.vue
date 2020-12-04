@@ -21,7 +21,7 @@
                 </el-menu>
             </div>
             <div id="header-user">
-                <el-dropdown style="margin-right: 10px">
+                <el-dropdown v-if="this.$store.state.user.token" style="margin-right: 10px">
                     <span class="el-dropdown-link">
                         {{this.$store.state.user.nickName}}<i class="el-icon-arrow-down el-icon--right"></i>
                     </span>
@@ -29,6 +29,8 @@
                         <el-dropdown-item>个人中心</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
+                <el-button type="text" v-else :style="{color: this.colorCard.textColor}"
+                         id="login-btn" @click="login">登录/注册</el-button>
                 <el-avatar :size="80" fit="fill" :src="this.$store.state.user.icon"></el-avatar>
             </div>
         </div>
@@ -43,13 +45,28 @@
         methods: {
             handleSelect(index) {
                 console.log(index)
-            }
+            },
+          login() {
+            this.$router.push('/Login')
+          }
         },
-        created() {}
+        created() {},
+      computed: {
+        iconSrc() {
+          if(this.$store.state.user.token) return this.$store.state.user.icon;
+          else return 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png';
+        },
+      },
     }
 </script>
 
 <style>
+    html {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
     body {
         margin: 0;
     }
@@ -95,5 +112,9 @@
         cursor: pointer;
         color: #FFFFFF;
         font-size: 20px;
+    }
+    #login-btn {
+      font-size: 20px;
+      margin-right: 10px;
     }
 </style>

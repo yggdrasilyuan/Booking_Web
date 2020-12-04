@@ -1,6 +1,7 @@
 const state = () => ({
     nickName: 'yggdrasil',
-    icon: 'https://sm.ms/image/w4Z2pPg6FBLKR8m'
+    icon: 'https://sm.ms/image/w4Z2pPg6FBLKR8m',
+    token:null
 })
 
 const mutations = {
@@ -9,6 +10,9 @@ const mutations = {
     },
     setIcon(state, payload) {
         state.icon = payload
+    },
+    setToken(state, payload) {
+        state.token = payload
     }
 }
 
